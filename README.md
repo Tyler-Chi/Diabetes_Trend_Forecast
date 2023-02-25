@@ -22,4 +22,6 @@ Poverty Data:
 https://www.ers.usda.gov/data-products/county-level-data-sets/county-level-data-sets-download-data/
 
 Understanding FIPS codes
-https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html
+https://www.census.gov/programs-surveys/geography/guidance/geo-identifiers.html\
+
+https://chronicdata.cdc.gov/500-Cities-Places/500-Cities-Census-Tract-level-Data-GIS-Friendly-Fo/k25u-mg9b
