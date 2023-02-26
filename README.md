@@ -16,19 +16,18 @@ The basis of the training data comes from the results of a 2017 CDC census, whic
 
 # [Health Trend Calculation (notebook link)](./Data_Processing/Health_Trends.ipynb)
 
-Past health trend data was generated using a similar census from 2016. The purpose of this was to quantify which direction health measurements were going in. For example, if the 2016 obesity rate was 10%, and the 2017 obesity rate was 15%, this would represent a obesity trend of 0.5.
-
-
-example chart
+Past health trend data was generated using a similar census from 2016. The purpose of this was to quantify which direction health measurements were going in. For example, if the 2016 obesity rate was 10%, and the 2017 obesity rate was 15%, this would represent 50%. In this project, "trend" is synonymous with percentage change.
 
 
 # [Unemployment Trend Calculation](./Data_Processing/Poverty_Data_Joining.ipynb)
 
-The USDA has a dataset of various County-level economic metrics, spanning 2000-2021. This was used in a similar fashion as the Health Trend data. The 2017 unemployment data is captured as a feature, along with the trend from 2016. For example, if the unemployment rate of a given county was 2% in 2016 and 3% in 2017, this would represent a trend of 0.5.
+The USDA has a dataset of various County-level economic metrics, spanning 2000-2021. This was used in a similar fashion as the Health Trend data. The 2017 unemployment data is captured as a feature, along with the trend from 2016. For example, if the unemployment rate of a given county was 2% in 2016 and 3% in 2017, this would represent a trend of 0.5. One difference from the health trend data is that the unemployment data is on a County-scale. This means that census tracts belonging to the same county would have the same unemployment statistics.
 
 # Target Variable Calculation
 
 The goal of this project is to use data from 2016 and 2017 to predict how the diabetes rate of a given area will change in the next 3 years. This target variable is calculated by using the diabetes rate in the 2020 CDC data, and comparing it against the diabetes rate in 2017 in the corresponding area.
+
+![final training data](./Images/final_training_data.png)
 
 # Target Variable Distribution
 
