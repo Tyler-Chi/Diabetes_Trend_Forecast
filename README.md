@@ -39,12 +39,15 @@ Among the ~27k census tracts, Diabetes Prevalence rates increased by 0.014 on av
 
 ## Random Forest
 
-The first model type I experimented with was Random Forest. I chose Random Forest because of its high interpretability -- I was very interested in seeing which features helped the model the most. I chose hyperparameters by using [grid search with cross validation](./Modeling/RandomForest_GridSearchCV.ipynb).
+The first model type I experimented with was Random Forest. I chose Random Forest because of its high interpretability -- I was very interested in seeing which features helped the model the most. I chose hyperparameters by using [grid search with cross validation](./Modeling/RandomForest_GridSearchCV.ipynb). Using these hyperparameters, the Random Forest model was able to get a validation r2 score of ~0.205
 
-Predicted vs Actual for both train and validation:
+![pred vs test](./Images/rf_pred_test.png)
 
 ## Random Forest Feature Importances
 
+The trend in adults taking blood pressure medication (BPMED_trend) was the strongest leading indicator of diabetes prevalence. This does make a lot of sense, as increased blood pressure is a sign of cardiovascular issues.
+
+![rf feature importance](./Images/rf_feature_importance.png)
 
 # Datasets
 
