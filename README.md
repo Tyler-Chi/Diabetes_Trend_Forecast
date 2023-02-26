@@ -9,9 +9,9 @@ I hope that this could be a useful tool for local governments to be able to anti
 
 # [Training Data Assembly (notebook link)](./Data_Processing/2017_Health_Data.ipynb)
 
-The basis of the training data comes from the results of a 2017 CDC census, which has health measurements of ~27k Census Tracts (essentially subdivisions of counties.) These measurements include estimated incidence rates of various issues like Diabetes, COPD, and drinking.
+The basis of the training data comes from the results of a 2017 CDC census, which has health measurements of ~27k Census Tracts (essentially subdivisions of counties.) These measurements include estimated incidence rates of various issues like Diabetes, COPD, and drinking. The original dataset has 1 row per health measure per census tract (500k rows). To make the basis of the training data, I aggregated the information from each census tract, in order to represent it in a single row.
 
-example chart
+![basis training data](./Images/base_training_data.png)
 
 
 # [Health Trend Calculation (notebook link)](./Data_Processing/Health_Trends.ipynb)
@@ -32,10 +32,19 @@ The goal of this project is to use data from 2016 and 2017 to predict how the di
 
 # Target Variable Distribution
 
-Among the ~27k census tracts, Diabetes Prevalence rates increased by 1.4% on average between 2017 and 2020. The distribution seems to be pretty heavily concentrated towards the middle, although there are a good amount of areas that saw more than a 10% change (both up and down).
+Among the ~27k census tracts, Diabetes Prevalence rates increased by 0.014 on average between 2017 and 2020. The distribution seems to be pretty heavily concentrated towards the middle, although there are a good amount of areas that saw more than a 10% change (both up and down).
 
 ![target_variable_Distribution](./Images/target_variable_distribution.png)
 
+# Modeling
+
+## Random Forest
+
+The first model type I experimented with was Random Forest. I chose Random Forest because of its high interpretability -- I was very interested in seeing which features helped the model the most. I chose hyperparameters by using [grid search with cross validation](./Modeling/RandomForest_GridSearchCV.ipynb).
+
+Predicted vs Actual for both train and validation:
+
+## Random Forest Feature Importances
 
 
 # Datasets
