@@ -43,7 +43,7 @@ I used [Linear Regression](./Modeling/LinearRegression.ipynb) as the baseline mo
 
 ## [Random Forest](./Modeling/RandomForest.ipynb)
 
-The first complex model type I experimented with was Random Forest. I chose Random Forest because of its high interpretability -- I was very interested in seeing which features helped the model the most. I chose hyperparameters by using [grid search with cross validation](./Modeling/RandomForest_GridSearchCV.ipynb). Using these hyperparameters, the Random Forest model was able to get a validation r2 score of ~0.205. This means that of the variance in the target variable, the random forest model was able to explain around 20% of it. This could likely be improved by further feature engineering.
+The first complex model type I experimented with was Random Forest. I chose Random Forest because of its high interpretability -- I was very interested in seeing which features helped the model the most. I chose hyperparameters by using [grid search with cross validation](./Modeling/RandomForest_GridSearchCV.ipynb). Using these hyperparameters, the Random Forest model was able to get a validation r2 score of ~0.24.3. Hopefully this can be improved with further feature engineering.
 
 ![pred vs test](./Images/rf_pred_test.png)
 
@@ -53,10 +53,13 @@ The trend in adults taking blood pressure medication (BPMED_trend) was the stron
 
 ![rf feature importance](./Images/rf_feature_importance.png)
 
+## [XGBoost](./Modeling/XGBoost.ipynb)
+
+I then tried XGBoost, another tree based model. I was curious to see how it would perform compared to the Random Forest. I again chose hyperparameters using grid search with cross validation. XGBoost with the tuned hyperparameters achieved an average cross validation r2 score of 0.22. 
 
 ## Neural Network
 
-I also tried tackling this problem with neural networks. I used [grid search for hyperparameter tuning](./Modeling/NeuralNetwork_GridSearch.ipynb). The best validation-r2 score I was able to get was around ~0.25, which slightly beat out the random forest approach. 
+I also tried tackling this problem with neural networks. I used [grid search for hyperparameter tuning](./Modeling/NeuralNetwork_GridSearch.ipynb). The best validation-r2 score I was able to get was around ~0.25, slightly beating out XGBoost.
 
 # Datasets
 
