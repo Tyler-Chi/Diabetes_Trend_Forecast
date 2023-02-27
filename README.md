@@ -37,17 +37,26 @@ Among the ~27k census tracts, Diabetes Prevalence rates increased by 0.014 on av
 
 # Modeling
 
-## Random Forest
+## Baseline Model
 
-The first model type I experimented with was Random Forest. I chose Random Forest because of its high interpretability -- I was very interested in seeing which features helped the model the most. I chose hyperparameters by using [grid search with cross validation](./Modeling/RandomForest_GridSearchCV.ipynb). Using these hyperparameters, the Random Forest model was able to get a validation r2 score of ~0.205
+I used [Linear Regression](./Modeling/LinearRegression.ipynb) as the baseline model. The average r2 score obtained through cross validation was 0.14. Hopefully the later models will be able to perform better.
+
+## [Random Forest](./Modeling/RandomForest.ipynb)
+
+The first complex model type I experimented with was Random Forest. I chose Random Forest because of its high interpretability -- I was very interested in seeing which features helped the model the most. I chose hyperparameters by using [grid search with cross validation](./Modeling/RandomForest_GridSearchCV.ipynb). Using these hyperparameters, the Random Forest model was able to get a validation r2 score of ~0.205. This means that of the variance in the target variable, the random forest model was able to explain around 20% of it. This could likely be improved by further feature engineering.
 
 ![pred vs test](./Images/rf_pred_test.png)
 
 ## Random Forest Feature Importances
 
-The trend in adults taking blood pressure medication (BPMED_trend) was the strongest leading indicator of diabetes prevalence. This does make a lot of sense, as increased blood pressure is a sign of cardiovascular issues.
+The trend in adults taking blood pressure medication (BPMED_trend) was the strongest leading indicator of diabetes prevalence. This does make a lot of sense, as increased blood pressure is a sign of cardiovascular issues. It makes sense that both DIABETES_2017 and DIABETES_trend scored highly in terms of feature importances. 
 
 ![rf feature importance](./Images/rf_feature_importance.png)
+
+
+## Neural Network
+
+I also tried tackling this problem with neural networks. I used [grid search for hyperparameter tuning](./Modeling/NeuralNetwork_GridSearch.ipynb). The best validation-r2 score I was able to get was around ~0.25, which slightly beat out the random forest approach. 
 
 # Datasets
 
