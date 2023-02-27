@@ -58,7 +58,7 @@ The goal of this project is to use data from 2016 and 2017 to predict how the di
 
 # Target Variable Distribution
 
-Among the ~27k census tracts, Diabetes Prevalence rates increased by 0.014 on average between 2017 and 2020. The distribution seems to be pretty heavily concentrated towards the middle, although there are a good amount of areas that saw more than a 10% change (both up and down).
+Among the ~27k census tracts, Diabetes Prevalence rates increased by 1.4% on average between 2017 and 2020. The distribution seems to be pretty heavily concentrated towards the middle, although there are a good amount of areas that saw more than a 10% change (both up and down).
 
 ![target_variable_Distribution](./Images/target_variable_distribution.png)
 
