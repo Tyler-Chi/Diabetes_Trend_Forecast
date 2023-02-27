@@ -99,9 +99,7 @@ I will later use SHAP values to understand what features the neural network foun
 
 The feature importances from both of the tree based models was readily accessible. I thought that it was very interesting that Asthma prevalences was considered a strong leading indicator by both models. Maybe when people get Asthma, it becomes harder for them to exercise, thus leading to increased Diabetes prevalence. It could also just be strongly correlated with general cardiovascular health.
 
-Overall there are likely a lot of multi-collinerities within the health features. Also, it did not seem like the unemployment statistics cracked the top 15 features for either tree based approach.
-
-I plan to add more features later, and see how model performance improves! Stay tuned.
+According to a [study done in 2019](https://pubmed.ncbi.nlm.nih.gov/25635985/), air pollution has been found to be stronglly associated with type 2 diabetes. I plan to join in air quality information from the EPA, to see if the models can be further improved. Stay tuned!
 
 # Datasets
 
