@@ -1,0 +1,12 @@
+2016_data.csv: CDC health measure data from 2016
+2017_data.csv: CDC health measure data from 2017
+2020_data.csv: CDC health measure data from 2020
+
+annual_aqi_by_county_2016.csv: EPA AQI data from 2016
+annual_aqi_by_county_2017.csv: EPA AQI data from 2017
+
+# Processed datasets
+training_data.csv: base health measures from 2017 (2017_Health_Data.ipynb)
+joined_health_data.csv: added health trends from 2016 (Health_Trends.ipynb)
+training_data_full.csv: added poverty data (Poverty_Data_Joining.ipynb)
+training_data_with_aqi: added AQI 2017 data + trend (Air_Quality_Joining.ipynb)
