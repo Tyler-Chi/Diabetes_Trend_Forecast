@@ -96,7 +96,16 @@ I also tried tackling this problem with neural networks. I used [grid search for
 
 The feature importances from both of the tree based models was readily accessible. I thought that it was very interesting that Asthma prevalences was considered a strong leading indicator by both models. Maybe when people get Asthma, it becomes harder for them to exercise, thus leading to increased Diabetes prevalence. It could also just be strongly correlated with general cardiovascular health.
 
-According to a [study done in 2019](https://pubmed.ncbi.nlm.nih.gov/25635985/), air pollution has been found to be stronglly associated with type 2 diabetes. I plan to join in air quality information from the EPA, to see if the models can be further improved. Stay tuned!
+According to a [study done in 2019](https://pubmed.ncbi.nlm.nih.gov/25635985/), air pollution has been found to be stronglly associated with type 2 diabetes. I plan to join in air quality information from the EPA, to see if the models can be further improved.
+
+## [AQI Trend Calculation](./Data_Processing/Air_Quality_Joining.ipynb)
+
+The EPA provides annual air quality stats, split by county. I used the data from both 2017 and 2016. Similar to the health measures, I added the 2017 values as a new feature, and the percentage increase from 2016 as another feature.
+
+There is a pretty big distribution in the AQI, so I hoped that adding it as a feature would improve the model performances. Unfortunately, this was not the case.
+
+![aqi trend](../Images/aqi_trend_distribution.png)
+
 
 # Datasets
 
@@ -105,6 +114,8 @@ According to a [study done in 2019](https://pubmed.ncbi.nlm.nih.gov/25635985/), 
 [2020 CDC Census Results](https://chronicdata.cdc.gov/500-Cities-Places/PLACES-Local-Data-for-Better-Health-Census-Tract-D/cwsq-ngmh)
 
 [USDA Unemployment Data](https://www.ers.usda.gov/data-products/county-level-data-sets/county-level-data-sets-download-data/)
+
+[AQI Data by County](https://aqs.epa.gov/aqsweb/airdata/download_files.html)
 
 # Related knowledge
 
