@@ -90,10 +90,7 @@ I then tried XGBoost, another tree based model. I was curious to see how it woul
 
 ## [Neural Network](./Modeling/NeuralNetwork.ipynb)
 
-I also tried tackling this problem with neural networks. I used [grid search for hyperparameter tuning](./Modeling/NeuralNetwork_GridSearch.ipynb). The best validation-r2 score I was able to get was around ~0.25, slightly beating out both of the tree-based approaches.
-
-I will later use SHAP values to understand what features the neural network found to be important.
-
+I also tried tackling this problem with neural networks. I used [grid search for hyperparameter tuning](./Modeling/NeuralNetwork_GridSearch.ipynb). The average cross validation r2 score was **~0.245**, extremely similar to the Random Forest performance, and slightly better than XGBoost performance.
 
 ## Findings
 
