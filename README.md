@@ -102,9 +102,9 @@ According to a [study done in 2019](https://pubmed.ncbi.nlm.nih.gov/25635985/), 
 
 The EPA provides annual air quality stats, split by county. I used the data from both 2017 and 2016. Similar to the health measures, I added the 2017 values as a new feature, and the percentage increase from 2016 as another feature.
 
-There is a pretty big distribution in the AQI, so I hoped that adding it as a feature would improve the model performances. Unfortunately, this was not the case.
+There is a pretty big distribution in the AQI, so I hoped that adding it as a feature would improve the model performances. Some places have significantly worse air than others. Unfortunately, the addition of this feature did not improve the model by much.
 
-![aqi trend](../Images/aqi_trend_distribution.png)
+![aqi trend](./Images/aqi_trend_distribution.png)
 
 
 # Datasets
