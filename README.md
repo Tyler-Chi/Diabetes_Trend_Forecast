@@ -50,6 +50,16 @@ These are the health measures that were present in both the 2016 and 2017 census
 | PHLTH      | Physical health not good for >=14 days among adults aged >=18 Years                                   |
 | STROKE     | Stroke among adults aged >=18 Years                                                                   |
 
+## [AQI Trend Calculation](./Data_Processing/Air_Quality_Joining.ipynb)
+
+According to a [study done in 2019](https://pubmed.ncbi.nlm.nih.gov/25635985/), air pollution has been found to be stronglly associated with type 2 diabetes. I wanted to join air pollution data based on location to the dataset.
+
+The EPA provides annual air quality stats, split by county. I used the data from both 2017 and 2016. Similar to the health measures, I added the 2017 values as a new feature, and the percentage increase from 2016 as another feature.
+
+There is a pretty big distribution in the AQI, so I hoped that adding it as a feature would improve the model performances. Some places have significantly worse air than others. Unfortunately, the addition of this feature did not improve the model by much.
+
+![aqi trend](./Images/aqi_trend_distribution.png)
+
 # Target Variable Calculation
 
 The goal of this project is to use data from 2016 and 2017 to predict how the diabetes rate of a given area will change in the next 3 years. This target variable is calculated by using the diabetes rate in the 2020 CDC data, and comparing it against the diabetes rate in 2017 in the corresponding area.
@@ -95,16 +105,6 @@ I also tried tackling this problem with neural networks. I used [grid search for
 ## Findings
 
 The feature importances from both of the tree based models was readily accessible. I thought that it was very interesting that Asthma prevalences was considered a strong leading indicator by both models. Maybe when people get Asthma, it becomes harder for them to exercise, thus leading to increased Diabetes prevalence. It could also just be strongly correlated with general cardiovascular health.
-
-According to a [study done in 2019](https://pubmed.ncbi.nlm.nih.gov/25635985/), air pollution has been found to be stronglly associated with type 2 diabetes. I plan to join in air quality information from the EPA, to see if the models can be further improved.
-
-## [AQI Trend Calculation](./Data_Processing/Air_Quality_Joining.ipynb)
-
-The EPA provides annual air quality stats, split by county. I used the data from both 2017 and 2016. Similar to the health measures, I added the 2017 values as a new feature, and the percentage increase from 2016 as another feature.
-
-There is a pretty big distribution in the AQI, so I hoped that adding it as a feature would improve the model performances. Some places have significantly worse air than others. Unfortunately, the addition of this feature did not improve the model by much.
-
-![aqi trend](./Images/aqi_trend_distribution.png)
 
 
 # Datasets
